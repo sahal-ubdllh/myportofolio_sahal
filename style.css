@@ -1,0 +1,162 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #052548;
+    --bg-color: #F4F6FF;
+    /* --second-color: #BE3D2A; */
+    --second-color: #F3C623;
+    --white-color: #fff;
+    --hover: #aaa;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--main-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 10px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.logo span {
+    color: var(--second-color);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.navigasi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.navigasi li {
+    padding: 15px;
+}
+
+.navigasi a {
+    color: var(--white-color);
+    padding: 5px;
+}
+.navigasi > li > a:hover,
+.navigasi li a:active {
+    color: var(--second-color);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 91vh;
+    background-color: var(--main-color);
+    padding: 20px;
+    gap: 10px;
+}
+
+.img-hero img {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--white-color);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    transition: all .2s linear;
+}
+
+.img-hero img:hover {
+    border: 3px solid var(--second-color);
+    transform: scale(1.05);
+}
+
+.about-img img{
+    max-width: 300px;
+    border-radius: 20px;
+    border: 2px solid var(--main-color);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    transition: all .2s linear;
+}
+.about-img img:hover {
+    
+}
+
+.hero {
+    padding: 10px;
+    color: var(--white-color);
+}
+
+.hero h4 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+}
+.hero h2 span {
+    color: var(--second-color);
+}
+
+.hero h3 {
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 2px solid var(--white-color);
+    border-bottom: 2px solid var(--white-color);
+}
+
+.about {
+    height: 70vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 767px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .img-hero img,
+    .about-img img {
+        width: 250px;
+    }
+}
+
