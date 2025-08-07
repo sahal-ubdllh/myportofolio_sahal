@@ -134,10 +134,9 @@ nav {
     border: 2px solid var(--main-color);
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
     transition: all .2s linear;
-    animation: appearTop linear;
+    animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0;
-    z-index: 1;
 }
 .about-img img:hover {
     transform: translateY(-10px);
@@ -165,7 +164,6 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     width: 100%;
-    justify-content: space-evenly;
     border-top: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
 }
@@ -174,12 +172,12 @@ nav {
     color: var(--second-color);
     padding: 16px;
     border-radius: 20px;
-    animation: appearRight linear;
+    animation: appearLeft linear;
     animation-iteration-count: 1;
     animation-timeline: view();
     animation-fill-mode: forwards;
     animation-range: entry 0;
-    /* transition: all .1s linear; */
+    transition: all 2s linear;
 }
 .media-sosial a:hover {
     background-color: transparent;
@@ -223,6 +221,12 @@ nav {
     margin: 10px;
     padding: 20px;
     border-radius: 20px;
+    animation: appear linear;
+    animation-iteration-count: 1;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    animation-range: entry 0;
+    transition: all 2s linear;
 }
 
 .service-item .item h3 {
@@ -248,8 +252,24 @@ nav {
 }
 
 .skill-item {
-    padding: 20px;
     display: flex;
+    overflow: hidden;
+    max-width: 800px;
+    animation: appear linear;
+    animation-iteration-count: 1;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    animation-range: entry 0;
+    transition: all 2s linear;
+}
+
+.scroll-item {
+    display: flex;
+    gap: 3rem;
+    flex-shrink: 0;
+    padding: 1rem;
+    animation: scrollItem 5s linear infinite;
+    
 }
 
 .skill-item img {
@@ -265,6 +285,15 @@ nav {
     to {
         opacity: 1;
         scale: 1;
+    }
+}
+
+@keyframes scrollItem {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }
 
@@ -340,6 +369,18 @@ nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .media-sosial a{
+        animation: appearRight linear;
+        animation-iteration-count: 1;
+        animation-timeline: view();
+        animation-fill-mode: forwards;
+        animation-range: entry 0;
+    }
+
+    .skill-item{
+        max-width: 500px;
     }
 }
 
