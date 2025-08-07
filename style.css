@@ -25,6 +25,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     z-index: 9999;
     padding: 1rem 5%;
@@ -395,7 +396,7 @@ footer h2 {
         background-color: var(--main-color);
         gap: 0;
         overflow: hidden;
-        backdrop-filter: blur(50px);
+
     }
 
     #menuList {
@@ -403,13 +404,6 @@ footer h2 {
     }
 }
 @media screen and (max-width: 767px) {
-    /* .menu {
-        display: flex;
-        
-    } */
-    
-
-
     .home {
         display: flex;
         flex-direction: column;
@@ -447,7 +441,7 @@ footer h2 {
     }
 
     .skill-item{
-        max-width: 500px;
+        max-width: 400px;
     }
 }
 
