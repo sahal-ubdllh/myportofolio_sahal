@@ -20,21 +20,17 @@ body {
     background-color: var(--bg-color);
 }
 
-header {
+nav {
     background-color: var(--main-color);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 9999;
-}
-
-nav {
+    padding: 1rem 5%;
     display: flex;
-    text-align: center;
-    align-items: center;
     justify-content: space-between;
-    margin: auto;
-    padding: 0 10px;
+    align-items: center;
 }
 
 .logo {
@@ -49,11 +45,18 @@ nav {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+.icons {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    display: none;
+    cursor: pointer;
+}
+
 .navigasi {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    gap: 20px;
 }
 .navigasi li {
     padding: 15px;
@@ -72,7 +75,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 91vh;
+    height: 100vh;
     background-color: var(--main-color);
     padding: 20px;
     gap: 10px;
@@ -158,37 +161,7 @@ nav {
     color: var(--main-color);
 }
 
-.media-sosial {
-    padding: 10px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-    border-top: 2px solid var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-}
-.media-sosial a {
-    background-color: var(--main-color);
-    color: var(--second-color);
-    padding: 16px;
-    border-radius: 20px;
-    animation: appearLeft linear;
-    animation-iteration-count: 1;
-    animation-timeline: view();
-    animation-fill-mode: forwards;
-    animation-range: entry 0;
-    transition: all 2s linear;
-}
-.media-sosial a:hover {
-    background-color: transparent;
-    border: 2px solid var(--main-color);
-    padding: 14px;
-    color: var(--main-color);
-}
 
-.media-sosial i {
-    margin-right: 10px;
-}
 
 
 
@@ -277,6 +250,70 @@ nav {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer h2 {
+    text-align: center;
+    padding: 10px 0;
+    color: var(--main-color);
+    font-size: 2rem;
+}
+.media-sosial {
+    padding: 10px 20px;
+    display: grid;
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    border-top: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+.media-sosial a {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    padding: 16px;
+    border-radius: 20px;
+    animation: appearLeft linear;
+    animation-iteration-count: 1;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    animation-range: entry 0;
+    /* transition: all 2s linear; */
+}
+.media-sosial a:hover {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    padding: 14px;
+    color: var(--main-color);
+}
+
+.media-sosial i {
+    margin-right: 10px;
+}
+
+.cr {
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px;
+    width: 100%;
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -342,7 +379,37 @@ nav {
 
 
 /* RESPONSIVE */
+
+
+@media screen and (max-width: 900px) {
+    .icons {
+        display: block;
+    }
+
+    .navigasi {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--main-color);
+        gap: 0;
+        overflow: hidden;
+        backdrop-filter: blur(50px);
+    }
+
+    #menuList {
+        transition: all .5s ease;
+    }
+}
 @media screen and (max-width: 767px) {
+    /* .menu {
+        display: flex;
+        
+    } */
+    
+
+
     .home {
         display: flex;
         flex-direction: column;

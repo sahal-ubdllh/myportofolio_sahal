@@ -12,17 +12,16 @@
     <header>
         <nav>
             <a href="index.html" class="logo">Porto<span style="font-weight: 400;">Folio</span></a>
-
-            <div class="menu">
-                <ul class="navigasi">
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#about">Tentang Saya</a></li>
-                    <li><a href="#layanan">Layanan</a></li>
-                    <li><a href="#proyek">Proyek</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                </ul>
-            </div>
-            <button class="nav-btn" style="display: none;"><i class="fa-solid fa-bars"></i></button>
+            <ul class="navigasi" id="menuList">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#layanan">Layanan</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <div class="icons">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
         </nav>
     </header>
     <main>
@@ -45,12 +44,6 @@
             <div class="about-detail">
                 <h2>Tentang Saya</h2>
                 <p>Saya merupakan mahasiswa Informatika Universitas Majalengka. Saya memiliki minat pada bidang web developer. Saya memiliki kemampuan dalam sisi front-end dalam sebuah website. Saya pernah membuat website untuk tugas mata kuliah. Saya terbiasa dengan HTML, CSS, JavaScript serta familiar dengan PHP dan MySQL.</p>
-                <div class="media-sosial">
-                        <a href="https://www.linkedin.com/in/sahal-ubaidillah-gunardo-49a829277/" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
-                        <a href="https://github.com/sahal-ubdllh" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
-                        <a href="https://www.instagram.com/_sahalubdllh27/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                        <a href="https://www.tiktok.com/@hall_2722" target="_blank"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
-                </div>
             </div>
         </section>
 
@@ -85,6 +78,20 @@
             
         </section>
     </main>
+
+    <footer>
+        <h2>Media Sosial</h2>
+        <div class="media-sosial">
+            <a href="https://www.linkedin.com/in/sahal-ubaidillah-gunardo-49a829277/" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+            <a href="https://github.com/sahal-ubdllh" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+            <a href="https://www.instagram.com/_sahalubdllh27/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="https://www.tiktok.com/@hall_2722" target="_blank"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
+        </div>
+
+        <div class="cr">
+            Portofolio Sahal Ubaidillah Gunardo || 2025
+        </div>
+    </footer>
 
 
 
