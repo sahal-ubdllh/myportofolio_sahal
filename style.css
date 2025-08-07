@@ -443,5 +443,19 @@ footer h2 {
     .skill-item{
         max-width: 400px;
     }
+
+    .service-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
 
+@media screen and (max-width: 450px) {
+    .skill-item {
+        max-width: 300px;
+    }
+
+    
+}
