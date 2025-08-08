@@ -287,12 +287,11 @@ footer h2 {
     color: var(--second-color);
     padding: 16px;
     border-radius: 20px;
-    animation: appearLeft linear;
+    animation: appear linear;
     animation-iteration-count: 1;
     animation-timeline: view();
     animation-fill-mode: forwards;
     animation-range: entry 0;
-    /* transition: all 2s linear; */
 }
 .media-sosial a:hover {
     background-color: transparent;
@@ -312,6 +311,80 @@ footer h2 {
     width: 100%;
     color: var(--white-color);
     background-color: var(--main-color);
+}
+
+.proyek {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyek h2{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 20px 0;
+}
+
+.proyek-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.proyek-item {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: appear linear;
+    animation-iteration-count: 1;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    animation-range: entry 0;
+    transition: all 2s linear;
+}
+
+.proyek-item img {
+    width: 100%;
+}
+
+.proyek-item h4 {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.proyek-item p {
+    color: var(--main-color);
+    font-size: 1rem;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.proyek-item a {
+    border: none;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.proyek-item a:hover {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    padding: 8px;
 }
 
 
@@ -402,6 +475,15 @@ footer h2 {
     #menuList {
         transition: all .5s ease;
     }
+
+    .proyek-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .proyek-item {
+        width: 300px;
+    }
 }
 @media screen and (max-width: 767px) {
     .home {
@@ -433,7 +515,7 @@ footer h2 {
     }
 
     .media-sosial a{
-        animation: appearRight linear;
+        animation: appear linear;
         animation-iteration-count: 1;
         animation-timeline: view();
         animation-fill-mode: forwards;
