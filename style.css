@@ -96,11 +96,16 @@ nav li:first-child {
 }
 
 .sidebar-container {
+    width: 100%;
     margin-top: 50px;
 }
 
 .sidebar li {
     width: 100%;
+}
+
+.sidebar a:hover {
+    background-color: rgba(0, 45, 94, 0.9);
 }
 
 .sidebar button{
@@ -114,9 +119,6 @@ nav li:first-child {
     background-color: transparent;
 }
 
-.sidebar a {
-    width: 100%;
-}
 
 .home {
     display: flex;
