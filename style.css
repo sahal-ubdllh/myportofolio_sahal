@@ -622,6 +622,16 @@ footer h2 {
         flex-direction: column;
     }
 
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+    .hero h4 {
+        font-size: 1.2rem;
+    }
+    .hero h3 {
+        font-size: 1.2rem;
+    }
+
 
 }
 
@@ -632,6 +642,10 @@ footer h2 {
 
     .sidebar{
         width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
     }
 
     
