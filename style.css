@@ -21,55 +21,101 @@ body {
 }
 
 nav {
-    background-color: var(--main-color);
+    background-color: rgba(5, 37, 72, .8);
+    box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+    backdrop-filter: blur(10px);
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    right: 0;
+    z-index: 999;
+}
+
+nav ul {
     width: 100%;
-    z-index: 9999;
-    padding: 1rem 5%;
+    list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    text-transform: capitalize;
-    font-weight: 700;
-    color: var(--white-color);
+nav li {
+    height: 60px;
 }
 
-.logo span {
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+
+nav a:hover {
     color: var(--second-color);
-    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-.icons {
-    font-size: 1.5rem;
-    color: var(--white-color);
+
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.navbar button {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
     display: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar button:hover{
     cursor: pointer;
-}
-
-.navigasi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.navigasi li {
-    padding: 15px;
-}
-
-.navigasi a {
-    color: var(--white-color);
-    padding: 5px;
-}
-.navigasi > li > a:hover,
-.navigasi li a:active {
     color: var(--second-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(5, 37, 72, .8);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,.2);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar-container {
+    margin-top: 50px;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar button{
+    color: var(--second-color);
+    font-size: 1.2rem;
+    padding: 5px;
+    position: absolute;
+    top: 20px;
+    border: none;
+    left: 20px;
+    background-color: transparent;
+}
+
+.sidebar a {
+    width: 100%;
 }
 
 .home {
@@ -85,8 +131,8 @@ nav {
 .img-hero img {
     max-width: 300px;
     border-radius: 50%;
-    border: 2px solid var(--white-color);
-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--second-color);
+    box-shadow: 0px 0px 10px rgba(243, 198, 35, .9);
     transition: all .2s linear;
     animation: appearLeft ease 1s;
     animation-iteration-count: 1;
@@ -94,7 +140,7 @@ nav {
 }
 
 .img-hero img:hover {
-    border: 2px solid var(--second-color);
+    box-shadow: 0px 0px 20px rgba(243, 198, 35, .9);
 }
 
 .hero {
@@ -112,6 +158,7 @@ nav {
 }
 .hero h2 span {
     color: var(--second-color);
+    text-shadow: 0px 0px 5px rgba(243, 198, 35, .5);
 }
 
 .hero h3 {
@@ -122,20 +169,18 @@ nav {
 }
 
 .hero p {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .cv {
-    padding: 15px 20px;
+    padding: 10px 20px;
     color: var(--white-color);
     background-color: var(--second-color);
     border-radius: 20px;
 }
 
 .cv:hover {
-    border: 2px solid var(--second-color);
-    padding: 13px 18px;
-    background-color: transparent;
+    box-shadow: 0px 0px 10px rgba(243, 198, 35, .9);
 }
 
 .about {
@@ -462,6 +507,28 @@ footer h2 {
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* menggeser sedikit ke bawah */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* kembali ke posisi semula */
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards; /* durasi 0.5 detik */
+}
+
+ .zoom-in {
+   animation: zoomIn 0.8s ease forwards;
+ }
+ @keyframes zoomIn {
+   from { transform: scale(0.5); opacity: 0; }
+   to { transform: scale(1); opacity: 1; }
+ }
 
 
 
@@ -482,16 +549,11 @@ footer h2 {
         display: block;
     }
 
-    .navigasi {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background-color: var(--main-color);
-        gap: 0;
-        overflow: hidden;
-
+    .hideOnMobile {
+        display: none;
+    }
+    .navbar button {
+        display: flex;
     }
 
     .skill-item{
@@ -566,6 +628,10 @@ footer h2 {
 @media screen and (max-width: 450px) {
     .skill-item {
         max-width: 300px;
+    }
+
+    .sidebar{
+        width: 100%;
     }
 
     

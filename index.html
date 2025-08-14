@@ -7,31 +7,42 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">Porto<span style="font-weight: 400;">Folio</span></a>
-            <ul class="navigasi" id="menuList">
+        <ul class="sidebar">
+            <div class="sidebar-container">
+                <button onclick=hideSidebar()><i class="fa-solid fa-xmark"></i></button>
                 <li><a href="#">Beranda</a></li>
                 <li><a href="#about">Tentang Saya</a></li>
                 <li><a href="#layanan">Layanan</a></li>
                 <li><a href="#proyek">Proyek</a></li>
                 <li><a href="#kontak">Kontak</a></li>
-            </ul>
-            <div class="icons">
-            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-        </div>
-        </nav>
+            </div>
+        </ul>
+        <ul class="navbar fade-in">
+            <li><a href="#" style="font-weight: bold;">Porto<span style="color: var(--second-color); font-family: Georgia, 'Times New Roman', Times, serif;">folio</span></a></li>
+            <li class="hideOnMobile"><a href="#">Beranda</a></li>
+            <li class="hideOnMobile"><a href="#about">Tentang Saya</a></li>
+            <li class="hideOnMobile"><a href="#layanan">Layanan</a></li>
+            <li class="hideOnMobile"><a href="#proyek">Proyek</a></li>
+            <li class="hideOnMobile"><a href="#kontak">Kontak</a></li>
+            <button class="menu-btn" onclick=showSidebar()><i class="fa-solid fa-bars"></i></button>
+        </ul>
+    </nav>
     </header>
     <main>
         <section class="home">
             <div class="hero">
                 <h4>Halo 👋</h4>
-                <h2>Saya <span>Sahal Ubaidillah Gunardo</span></h2>
-                <h3>Front-end Developer || Fullstack Developer</h3>
+                <h2>Saya <span id="typed"></span></h2>
+                <h3 class="zoom-in">Front-end Developer <span style="color: var(--second-color);
+                font-size: 1.5rem;">||</span> Fullstack Developer</h3>
                 <p>Saya memiliki keterampilan dalam pengembangan web terutama pada sisi tampilan front-end nya.</p>
-                <a class="cv" href="./aset/CV - SAHAL UBAIDILLAH GUNARDO.pdf" target="_blank">Lihat CV</a>
+                <a class="cv zoom-in" href="./aset/CV - SAHAL UBAIDILLAH GUNARDO.pdf" target="_blank">Lihat CV</a>
             </div>
             <div class="img-hero">
                 <img src="./aset/fotoprofil.png" alt="profil-sahal">
